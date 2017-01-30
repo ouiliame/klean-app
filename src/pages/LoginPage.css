@@ -1,0 +1,46 @@
+.login-page {
+  position: absolute;
+  width: 100%;
+  min-height: 628px;
+  min-width: 628px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #45484d 0%, #131313 100%);
+}
+
+.form-paper {
+  border-radius: 3px !important;
+  max-width: 450px !important;
+  margin: auto !important;
+  padding: 30px !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text-field {
+  width: 350px !important;
+}
+
+.checkbox {
+  width: 350px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.button {
+  margin-top: 5px !important;
+  width: 350px !important;
+}
+
+.help-button {
+  color: #FFFFFF !important;
+  margin-top: 30px !important;
+  width: 100% !important;
+}
