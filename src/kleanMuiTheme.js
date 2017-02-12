@@ -1,7 +1,7 @@
 import {
   blue700,
   cyan500, cyan700,
-  pinkA200,
+  red700,
   grey100, grey300, grey400, grey500,
   white, darkBlack, fullBlack,
 } from 'material-ui/styles/colors';
@@ -10,12 +10,12 @@ import spacing from 'material-ui/styles/spacing';
 
 export default {
   spacing: spacing,
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Roboto", sans-serif',
   palette: {
     primary1Color: blue700,
     primary2Color: cyan700,
     primary3Color: grey400,
-    accent1Color: pinkA200,
+    accent1Color: red700,
     accent2Color: grey100,
     accent3Color: grey500,
     textColor: darkBlack,

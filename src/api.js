@@ -3,8 +3,13 @@
 
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'http://localhost:1337'
-});
+let baseURL;
+if (process.env.NODE_ENV !== 'production') {
+  baseURL = "http://localhost:1337/"; // development API server
+} else {
+  baseURL = "/"; // production API server (usually hosted on same server)
+}
 
-export default api;
+export default axios.create({
+  baseURL
+});

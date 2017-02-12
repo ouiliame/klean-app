@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import Paper from 'material-ui/Paper';
+
 import { connect } from 'react-redux';
 import { replace } from 'react-router-redux';
 import { reduxForm, Field, SubmissionError } from 'redux-form';
+
+import { actions as authActions } from 'app/reducers/auth';
+
 import {
   TextField,
   Checkbox
 } from 'redux-form-material-ui';
+import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import CircularProgress from 'material-ui/CircularProgress';
-import validator from 'validator';
-import { actions as authActions } from 'app/state/auth';
-import isEmpty from 'lodash/isEmpty';
 
+import validator from 'validator';
+import isEmpty from 'lodash/isEmpty';
 
 import './LoginPage.css';
 
 const form = ({handleSubmit, submitting}) => (
   <form className="form" onSubmit={handleSubmit}>
-    <img src="/images/login-logo.svg" width="350" />
-    <br />
+    <img className="logo" src="/images/login-logo.svg" /><br/>
     <Field className="text-field" name="email" type="email" disabled={submitting}
       component={TextField} floatingLabelText="Email Address" />
     <Field className="text-field" name="password" type="password" disabled={submitting}
@@ -51,7 +53,7 @@ class LoginPage extends Component {
 
   _doLogin = (values, dispatch) => {
     const errors = this._validate(values);
-    if (isEmpty(errors)) dispatch(authActions.authenticate(values));
+    if (isEmpty(errors)) dispatch( authActions.authenticate(values) );
     else throw new SubmissionError(errors);
   }
 

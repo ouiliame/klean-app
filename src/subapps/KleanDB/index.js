@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
-import HomeView from './HomeView';
-import RIndexView from './RIndexView';
-import RNewView from './RNewView';
-import RShowView from './RShowView';
+import ClientsIndex from './clients/ClientsIndex';
+import ClientsNew from './clients/ClientsNew';
+import ClientsShow from './clients/ClientsShow';
+
 
 export default class KleanDB extends Component {
-  static Home = HomeView;
-  static RIndex = RIndexView;
-  static RNew = RNewView;
-  static RShow = RShowView;
+
+  static Clients = {
+    Index: ClientsIndex,
+    New: ClientsNew,
+    Show: ClientsShow
+  }
 
   render() {
     return (
